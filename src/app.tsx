@@ -1,7 +1,9 @@
-import preactLogo from './assets/preact.svg'
+import { Header } from "./components/Header/Header"
 
-export function App() {
-  return (
-    <h1 className="text-sky-300 text-3xl">Hello world</h1>
-  )
+function App() {
+  return <>
+    <Header/>
+  </>
 }
+
+export default App
