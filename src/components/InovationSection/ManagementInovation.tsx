@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import inovacaoGestaoEmpresarialImg from "../../assets/images/ilustracoes/inovacao_gestao_empresarial.svg";
 
 export function ManagementInovation() {
@@ -20,13 +19,12 @@ export function ManagementInovation() {
             gerenciamento de projetos até desenvolvimento de software e soluções
             em nuvem.
           </p>
-          <Link
-            to="proposta"
-            smooth
-            className="py-4 w-full max-w-md font-bold text-center rounded-lg cursor-pointer md:w-3/5 lg:text-3xl text-inovation bg-yuan-yellow"
+          <a
+            href="#proposta"
+            className="py-4 w-full max-w-md font-bold text-center rounded-lg cursor-pointer md:w-4/5 lg:text-3xl text-inovation bg-yuan-yellow"
           >
             Fale com o especialista!
-          </Link>
+          </a>
         </div>
       </div>
     </section>

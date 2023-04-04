@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import cobrancaHumanizadaImg from "../../assets/images/ilustracoes/cobranca_humanizada.svg"
 
 export function HumanizedCollection() {
@@ -13,7 +12,7 @@ export function HumanizedCollection() {
           para recuperar o valor devido, buscando sempre manter uma relação
           cordial com o cliente devedor.
         </p>
-        <Link to="proposta" smooth className="py-4 font-bold text-center rounded-lg cursor-pointer lg:text-4xl bg-yuan-yellow text-primary" href="#proposta">Confira mais informações!</Link>
+        <a className="py-4 font-bold text-center rounded-lg cursor-pointer lg:text-4xl bg-yuan-yellow text-primary" href="#proposta">Confira mais informações!</a>
       </div>
       <img alt="Imagem" className="w-1/2" src={cobrancaHumanizadaImg}/>
     </div>

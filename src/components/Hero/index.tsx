@@ -3,7 +3,6 @@ import { CaretLeft, CaretRight } from "phosphor-react";
 import comunicacaoDigitalImg from "../../assets/images/ilustracoes/comunicacao_digital.svg";
 import solucoes from "../../assets/images/ilustracoes/solucoes.svg";
 import equipe from "../../assets/images/ilustracoes/equipe.svg";
-import { Link } from "react-scroll";
 
 type Carrousel = {
   text: string;
@@ -51,13 +50,12 @@ export function Hero() {
             >
               <div className="flex flex-col px-2 w-1/2 font-bold md:px-16 md:text-2xl lg:text-4xl text-primary">
                 <p>{item.text}</p>
-                <Link
+                <a
                   className="py-2 mt-8 w-full text-center rounded-lg cursor-pointer md:py-4 md:w-4/5 bg-yuan-yellow"
-                  to="proposta"
-                  smooth
+                  href="#proposta"
                 >
                   Fale com a gente
-                </Link>
+                </a>
               </div>
               <img alt={item.text} src={imgs[idx]} className="w-1/3 h-80" />
             </div>
