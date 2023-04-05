@@ -2,8 +2,8 @@ import cobrancaHumanizadaImg from "../../assets/images/ilustracoes/cobranca_huma
 
 export function HumanizedCollection() {
   return (
-    <div className="flex flex-col-reverse gap-8 p-8 w-full md:flex-row lg:px-32 lg:py-20 bg-humanized-collection text-humanized-button-text">
-      <div className="flex flex-col gap-6 md:w-1/2">
+    <div className="flex flex-col-reverse gap-8 items-center p-8 w-full md:flex-row lg:px-32 lg:py-20 bg-humanized-collection text-humanized-button-text">
+      <div className="flex flex-col gap-6 px-10">
         <h3 className="w-40 text-lg font-bold lg:text-6xl text-inovation text">
           Cobrança Humanizada
         </h3>
