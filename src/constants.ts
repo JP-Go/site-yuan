@@ -41,7 +41,7 @@ export const SOLUTIONS: SolutionCatetory[] = [
     imgPath: juridicoImg,
   },
   {
-    title: "Gestão de Negócios",
+    title: "Gestão de \nNegócios",
     solutions: ["Planejamento", "T&D", "R&S"],
     imgPath: gestaoImg,
   },
