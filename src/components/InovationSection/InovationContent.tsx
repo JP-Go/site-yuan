@@ -8,14 +8,14 @@ type InovationContentProps = {
 export function InovationContent({ data, visible }: InovationContentProps) {
   return (
     <div
-      className={`left-1/2 -translate-x-1/2 w-full absolute max-w-[1250px] flex flex-col md:flex-row md:justify-center items-center mx-auto lg:justify-center gap-4 lg:gap-20 h-full ${
+      className={`left-1/2 -translate-x-1/2 w-full absolute max-w-[1250px] flex flex-col md:flex-row md:justify-center items-center mx-auto lg:justify-center gap-4 lg:gap-10 h-full p-8 ${
         visible ? "z-10 opacity-100" : "z-0 opacity-0"
       }`}
     >
       <img
         src={data.contentImgPath}
         alt={data.contentTitle}
-        className="w-1/3 max-h-screen max-w-1/2"
+        className="w-1/2 max-h-screen max-w-1/2"
       />
       <div className="px-4 max-w-md md:w-1/2 md:px-auto">
         <h3 className="mb-2 text-2xl font-bold lg:mb-8 lg:text-6xl text-primary">
