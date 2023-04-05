@@ -128,7 +128,7 @@ export function Contact() {
         </div>
       </form>
       <div className="flex flex-1 gap-10 justify-between">
-        <span className="inline text-xs sm:text-md">
+        <span className="inline text-xs sm:text-base">
           <MapPin
             className="inline text-yuan-yellow"
             size={20}
