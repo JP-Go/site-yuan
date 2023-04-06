@@ -9,7 +9,7 @@ export function SolutionDisplay({ solution }: SolutionDisplayProps) {
     <div key={solution.title} className="flex">
       <div className="w-60">
         <img
-          className="pb-6 w-20 h-28 brightness-0 invert md:mx-0"
+          className="pb-6 mx-auto w-20 h-28 brightness-0 invert md:mx-0"
           src={solution.imgPath ? solution.imgPath : ""}
         />
         <h3 className="text-xl font-bold lg:text-3xl text-yuan-yellow">
