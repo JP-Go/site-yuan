@@ -11,7 +11,7 @@ function PortfolioSection() {
         variant="primary"
       >
         <div
-          className="flex flex-col gap-20 px-20 mt-20 lg:grid lg:grid-cols-4 lg:gap-y-20 lg:gap-x-40"
+          className="flex flex-col gap-20 px-20 mt-20 lg:grid lg:grid-cols-4 lg:gap-y-20 lg:gap-x-40 max-w-[1280px] w-full"
           id="produtos"
         >
           {products.slice(0, 4).map((imgSrc) => {
@@ -19,7 +19,9 @@ function PortfolioSection() {
           })}
           {products.slice(4, 6).map((imgSrc, idx) => {
             const style =
-              idx === 0 ? "place-self-end w-80" : "place-content-start h-28";
+              idx === 0
+                ? "lg:place-self-end place-self-center w-80"
+                : "place-content-start h-28";
             return (
               <img
                 key={imgSrc}

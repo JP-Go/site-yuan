@@ -23,15 +23,15 @@ export function InovationSection() {
         })}
       </div>
       <div className="pt-24 relative h-[800px] bg-secondary">
-          {INOVATIONS.map((inovation, idx) => {
-            return (
-              <InovationContent
-                key={`${idx}-${inovation.contentTitle}`}
-                data={inovation}
-                visible={idx === index}
-              />
-            );
-          })}
+        {INOVATIONS.map((inovation, idx) => {
+          return (
+            <InovationContent
+              key={`${idx}-${inovation.contentTitle}`}
+              data={inovation}
+              visible={idx === index}
+            />
+          );
+        })}
       </div>
     </section>
   );

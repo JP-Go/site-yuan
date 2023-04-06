@@ -2,8 +2,11 @@ import inovacaoGestaoEmpresarialImg from "../../assets/images/ilustracoes/inovac
 
 export function ManagementInovation() {
   return (
-    <section id="quem-somos" className="flex justify-center items-center pt-16 pb-40 w-full max-h-screen bg-primary h-min">
-      <div className="flex flex-col gap-2 items-center px-8 py-2 mx-auto w-full h-full lg:p-10 lg:flex-row lg:w-4/5 lg:gap-14">
+    <section
+      id="quem-somos"
+      className="flex justify-center items-center pt-16 pb-40 w-full max-h-screen bg-primary h-min"
+    >
+      <div className="flex flex-col gap-2 items-center px-8 py-2 mx-auto w-full h-full lg:p-10 lg:flex-row lg:w-4/5 lg:gap-14 max-w-[1280px]">
         <img
           alt="inovationImage"
           className="md:w-1/2 max-w-[500px] w-1/2 lg:h-full h-60"

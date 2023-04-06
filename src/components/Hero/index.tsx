@@ -29,7 +29,7 @@ export function Hero() {
   const { index, next, prev, setIndex } = useLoopCounter(items);
   return (
     <section className="flex flex-col justify-center items-center mx-auto w-full bg-secondary">
-      <div className="inline-flex overflow-x-hidden relative gap-4 w-full max-w-4/5 h-80 sm:h-[400px]">
+      <div className="inline-flex overflow-x-hidden justify-center relative gap-4 w-full max-w-[1280px] h-80 sm:h-[400px]">
         <CaretLeft
           size={40}
           className="hidden absolute left-8 top-1/2 z-10 cursor-pointer text-primary md:block"
