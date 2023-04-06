@@ -20,6 +20,9 @@ export default {
       outlineColor: {
         "yuan-yellow": "#eca900",
       },
+      borderColor: {
+        primary: "#2e303d",
+      },
     },
   },
   plugins: [],
