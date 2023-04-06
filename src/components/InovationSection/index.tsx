@@ -8,9 +8,9 @@ export function InovationSection() {
   const [index, setIndex] = useState(0);
 
   return (
-    <section className="flex flex-col">
+    <section className="flex relative flex-col">
       <ManagementInovation />
-      <div className="mx-auto -translate-y-1/2 max-w-[1250px] w-full py-6 bg-yuan-yellow flex items-baseline justify-evenly sm:gap-4 gap-2 px-10">
+      <div className="absolute mx-auto top-1/2 left-1/2 -translate-y-24 -translate-x-1/2 z-20 max-w-[1250px] w-full py-6 bg-yuan-yellow flex items-baseline justify-evenly sm:gap-4 gap-2 px-10">
         {INOVATIONS.map((inovation, idx) => {
           return (
             <InovationHeader
@@ -22,7 +22,7 @@ export function InovationSection() {
           );
         })}
       </div>
-      <div className="relative h-[600px] bg-secondary">
+      <div className="pt-24 relative h-[800px] bg-secondary">
           {INOVATIONS.map((inovation, idx) => {
             return (
               <InovationContent
