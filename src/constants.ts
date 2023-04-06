@@ -1,6 +1,3 @@
-import { SolutionCatetory } from "./@types/collection-section";
-import { InovationSectionItem } from "./@types/inovation-section";
-
 import gestaoImg from "./assets/images/icones/cobranca/gestao_de_negocios.svg";
 import analiseImg from "./assets/images/icones/cobranca/analise_de_dados.svg";
 import contactImg from "./assets/images/icones/cobranca/contact_center.svg";
@@ -17,6 +14,29 @@ import comunicacaoDigitalImg from "./assets/images/ilustracoes/cobranca_digital.
 import lembreteAntecipadoImg from "./assets/images/ilustracoes/lembrete_antecipado.svg";
 import businessIntelligenceImg from "./assets/images/ilustracoes/business_intelligence.svg";
 import omnichannelImg from "./assets/images/ilustracoes/ominichannel.svg";
+
+import type { NavigationSection } from "./@types/sections";
+import type { SolutionCatetory } from "./@types/sections";
+import type { InovationSectionItem } from "./@types/sections";
+
+export const navSections: NavigationSection[] = [
+  {
+    title: "Quem Somos",
+    link: "quem-somos",
+  },
+  {
+    title: "Gestão de cobranças",
+    link: "cobranca",
+  },
+  {
+    title: "Produtos",
+    link: "produtos",
+  },
+  {
+    title: "Cursos",
+    link: "#",
+  },
+];
 
 export const SOLUTIONS: SolutionCatetory[] = [
   {
