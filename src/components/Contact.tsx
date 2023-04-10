@@ -140,7 +140,7 @@ export function Contact() {
             </p>
           </div>
         </form>
-        <div className="flex flex-1 gap-10 justify-between">
+        <div className="flex gap-20 justify-between w-full">
           <span className="inline text-xs sm:text-base">
             <MapPin
               className="inline text-yuan-yellow"
@@ -149,7 +149,7 @@ export function Contact() {
             />
             Rua Prof. Darcí Araújo, nº 3025, São Cristóvão, Teresina - Pl
           </span>
-          <div className="flex flex-col gap-4 justify-start items-start pt-2 text-xs lg:justify-end md:flex-row md:flex-wrap">
+          <div className="flex flex-col gap-4 justify-start items-start pt-2 w-1/2 text-xs lg:justify-end md:flex-row md:flex-wrap md:shrink">
             <span className="inline-flex gap-1 items-center text-sm">
               <span className="inline-flex justify-center items-center rounded-full border-2 border-transparent w-fit h-fit outline outline-1 outline-yuan-yellow">
                 <Globe
