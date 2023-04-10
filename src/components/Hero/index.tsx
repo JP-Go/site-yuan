@@ -3,6 +3,8 @@ import { CaretLeft, CaretRight } from "phosphor-react";
 import comunicacaoDigitalImg from "../../assets/images/ilustracoes/comunicacao_digital.svg";
 import solucoes from "../../assets/images/ilustracoes/solucoes.svg";
 import equipe from "../../assets/images/ilustracoes/equipe.svg";
+import { TouchEvent } from "react";
+import { useState } from "react";
 
 type Carrousel = {
   text: string;
@@ -13,20 +15,38 @@ type CarrouselItem = Carrousel[number];
 
 const imgs = [comunicacaoDigitalImg, solucoes, equipe];
 
-export function Hero() {
-  const items: Carrousel = [
-    {
-      text: "Somos uma empresa inovadora que oferece soluções de alta qualidade para seu negócio",
-    },
-    {
-      text: "Desenvolvemos soluções projetadas para ajudar a aumentar a eficiência, reduzir custos e impulsionar a produtividade da sua empresa.",
-    },
-    {
-      text: "Nossa equipe de atendimento é capaz de lidar com uma ampla variedade de solicitações e problemas de seus clientes",
-    },
-  ];
+const items: Carrousel = [
+  {
+    text: "Somos uma empresa inovadora que oferece soluções de alta qualidade para seu negócio",
+  },
+  {
+    text: "Desenvolvemos soluções projetadas para ajudar a aumentar a eficiência, reduzir custos e impulsionar a produtividade da sua empresa.",
+  },
+  {
+    text: "Nossa equipe de atendimento é capaz de lidar com uma ampla variedade de solicitações e problemas de seus clientes",
+  },
+];
 
+export function Hero() {
   const { index, next, prev, setIndex } = useLoopCounter(items);
+
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  function handleTouchEnd(e: TouchEvent) {
+    const threshold = 150;
+    const touchDelta = touchEnd - touchStart;
+
+    if (touchDelta < threshold) {
+      next();
+      return;
+    }
+    if (touchDelta > -threshold) {
+      prev();
+      return;
+    }
+  }
+
   return (
     <section className="flex flex-col justify-center items-center mx-auto w-full bg-secondary">
       <div className="inline-flex overflow-x-hidden justify-center relative gap-4 w-full max-w-[1280px] h-80 sm:h-[400px]">
@@ -39,6 +59,10 @@ export function Hero() {
           const diff = Math.abs(index - idx);
           return (
             <div
+              onTouchStart={(e) =>
+                setTouchStart(e.targetTouches.item(0).clientX)
+              }
+              onTouchEnd={handleTouchEnd}
               key={`${idx}+${item.text}`}
               className={`absolute flex gap-4 md:w-md items-center justify-center transition-all duration-700 ${
                 index !== idx
