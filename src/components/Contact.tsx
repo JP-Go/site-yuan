@@ -18,6 +18,16 @@ export function Contact() {
   const [checked, setChecked] = useState<boolean | "indeterminate">(false);
   const [telefone, setTelefone] = useState("");
 
+  function clearForm() {
+    nomeRef.current!.value = "";
+    emailRef.current!.value = "";
+    assuntoRef.current!.value = "";
+    empresaRef.current!.value = "";
+    telefoneRef.current!.value = "";
+    setTelefone("");
+    setChecked(false);
+  }
+
   function handlePhoneChange() {
     const inputValue = telefoneRef.current?.value
       .replace(/\D/g, "")
@@ -32,7 +42,6 @@ export function Contact() {
       : `(${inputValue[1]}) ${inputValue[2]}-${inputValue[3]}`;
 
     setTelefone(telefoneRef.current!.value.replace(/\D/g, ""));
-    console.log(telefone);
   }
 
   function submitForm(e: FormEvent<Element>) {
@@ -41,9 +50,20 @@ export function Contact() {
     const assunto = assuntoRef.current!.value;
     const empresa = empresaRef.current!.value;
     e.preventDefault();
+
+    console.table({
+      nome,
+      email,
+      assunto,
+      empresa,
+      notificar: checked,
+      telefone,
+    });
+
     alert(
       "Obrigado por contactar! Nossa equipe entrará em contato pelo email fornecido."
     );
+    clearForm();
   }
 
   return (
