@@ -16,22 +16,33 @@ export function Contact() {
   const empresaRef = useRef<HTMLInputElement | null>(null);
   const telefoneRef = useRef<HTMLInputElement | null>(null);
   const [checked, setChecked] = useState<boolean | "indeterminate">(false);
+  const [telefone, setTelefone] = useState("");
+
+  function handlePhoneChange() {
+    const inputValue = telefoneRef.current?.value
+      .replace(/\D/g, "")
+      .match(/(\d{2})(\d{5})(\d{4})/);
+
+    if (!inputValue) {
+      return;
+    }
+    telefoneRef.current!.value = !inputValue[2]
+      ? inputValue[1]
+      : `(${inputValue[1]}) ${inputValue[2]}-${inputValue[3]}`;
+
+    setTelefone(telefoneRef.current!.value.replace(/\D/g, ""));
+    console.log(telefone);
+  }
 
   function submitForm(e: FormEvent<Element>) {
     const nome = nomeRef.current!.value;
     const email = emailRef.current!.value;
     const assunto = assuntoRef.current!.value;
     const empresa = empresaRef.current!.value;
-    const telefone = telefoneRef.current!.value;
-    console.table({
-      nome,
-      email,
-      assunto,
-      novidade: checked,
-      empresa,
-      telefone,
-    });
     e.preventDefault();
+    alert(
+      "Obrigado por contactar! Nossa equipe entrará em contato pelo email fornecido."
+    );
   }
 
   return (
@@ -113,6 +124,7 @@ export function Contact() {
                 type="text"
                 required
                 ref={telefoneRef}
+                onChange={handlePhoneChange}
               />
             </div>
             <button
