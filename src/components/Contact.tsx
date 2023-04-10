@@ -21,11 +21,12 @@ export function Contact() {
   function handlePhoneChange() {
     const inputValue = telefoneRef.current?.value
       .replace(/\D/g, "")
-      .match(/(\d{2})(\d{5})(\d{4})/);
+      .match(/(\d{2})(\d{4,5})(\d{4})/);
 
     if (!inputValue) {
       return;
     }
+
     telefoneRef.current!.value = !inputValue[2]
       ? inputValue[1]
       : `(${inputValue[1]}) ${inputValue[2]}-${inputValue[3]}`;
