@@ -4,7 +4,8 @@ type ShowcaseProps = {
   title: string;
   alt: string;
   variant: "primary" | "secondary";
-  children: ReactNode
+  children: ReactNode;
+  id: string;
 };
 
 const wrapperClassVariants: Record<string, string> = {
@@ -17,13 +18,13 @@ const titleClassVariants: Record<string, string> = {
   secondary: "text-primary",
 };
 
-export function Showcase({ title,  variant, children }: ShowcaseProps) {
+export function Showcase({ title, variant, children, id }: ShowcaseProps) {
   const wrapperClass = `flex flex-col items-center py-20 ${wrapperClassVariants[variant]}`;
   const titleClass = `text-5xl font-bold text-center ${titleClassVariants[variant]}`;
   return (
-    <div className={wrapperClass}>
+    <div className={wrapperClass} id={id}>
       <h2 className={titleClass}>{title}</h2>
-        {children}
+      {children}
     </div>
   );
 }

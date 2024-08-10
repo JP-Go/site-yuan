@@ -36,6 +36,7 @@ function PortfolioSection() {
         title="Nossos clientes"
         alt="Clientes da Yuan"
         variant="secondary"
+        id="clientes"
       >
         <div className="flex flex-col gap-12 px-20 mt-20 lg:flex-row lg:gap-28 lg:items-stretch">
           {clients.slice(0, 4).map((imgSrc) => {

@@ -41,9 +41,8 @@ function App() {
         />
       )}
       <div
-        className={`flex lg:hidden fixed top-0 left-0 z-40 self-start w-64 h-screen transition-all bg-secondary sidebar ${
-          sidebarClosed ? "-translate-x-full" : "translate-x-0"
-        }`}
+        className={`flex lg:hidden fixed top-0 left-0 z-40 self-start w-64 h-screen transition-all bg-secondary sidebar ${sidebarClosed ? "-translate-x-full" : "translate-x-0"
+          }`}
       >
         <ul className="flex-1 p-4 pr-8 mt-8 w-full h-full transition-opacity">
           {navSections.map((section) => (
@@ -67,9 +66,8 @@ function App() {
           >
             <CaretRight
               size={20}
-              className={`text-primary transition-transform duration-500 ${
-                sidebarClosed ? "rotate-0" : "-rotate-180"
-              }`}
+              className={`text-primary transition-transform duration-500 ${sidebarClosed ? "rotate-0" : "-rotate-180"
+                }`}
             />
           </button>
         </div>
@@ -81,7 +79,7 @@ function App() {
       <PortfolioSection />
       <Contact />
       {showFab && <FABToTop />}
-    </main>
+      </main>
   );
 }
 

@@ -33,8 +33,8 @@ export const navSections: NavigationSection[] = [
     link: "produtos",
   },
   {
-    title: "Cursos",
-    link: "#",
+    title: "Clientes",
+    link: "clientes",
   },
 ];
 
