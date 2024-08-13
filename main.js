@@ -8,6 +8,8 @@ import {
   Ruler,
   Notebook,
   LibraryBig,
+  Facebook,
+  Instagram,
   Map,
 } from "./node_modules/lucide/dist/esm/lucide.js";
 
@@ -22,5 +24,7 @@ createIcons({
     Notebook,
     Map,
     LibraryBig,
+    Facebook,
+    Instagram,
   },
 });

@@ -41,7 +41,37 @@
         </div>
       </div>
     </header>
-    <main class="z-10 my-40 w-full px-16">
+    <main class="z-10 my-40 w-full space-y-16 px-16">
+      <section class="flex items-center justify-center px-16">
+        <div
+          class="relative flex min-h-[420px] w-full flex-col justify-center gap-4 overflow-visible rounded-xl bg-yun-gray p-16 text-white"
+        >
+          <span
+            class="absolute right-0 top-0 -z-10 h-[50px] w-[300px] -translate-y-1/2 translate-x-1/4 rounded-xl bg-yun-yellow"
+          ></span>
+          <h1 class="text-2xl font-bold">Yuan Soluções</h1>
+          <h2 class="w-[400px] text-4xl font-bold text-yun-yellow">
+            Simplifique os processos da sua empresa!
+          </h2>
+          <p class="w-[480px]">
+            Está enfrentando dificuldades para receber pagamentos? Deixe nossa
+            equipe especializada cuidar disso para você.
+          </p>
+          <img
+            class="absolute -top-10 right-0"
+            src="/assets/business-woman.png"
+            class="object-fill"
+          />
+          <a
+            href="#contato"
+            class="w-fit rounded-lg border border-yun-gray bg-yun-yellow px-3 py-3 font-bold text-yun-gray shadow-btn shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
+            >Entre em contato</a
+          >
+          <span
+            class="absolute bottom-0 left-0 -z-10 h-[50px] w-[300px] -translate-x-1/4 translate-y-1/2 rounded-xl bg-yun-yellow"
+          ></span>
+        </div>
+      </section>
       <section class="flex flex-col gap-6">
         <h2 class="text-2xl font-bold text-yun-gray">Nossos diferenciais</h2>
         <div
@@ -178,11 +208,172 @@
           Alguns dos clientes que nos contratam para realizar suas cobranças ou
           com que já trabalhamos no passado.
         </p>
-        <div class="flex h-80 w-full justify-center gap-8 p-4">
-          <img src="/assets/clients/claro.png" class="w-[280px]" />
+        <div class="flex w-full items-center justify-evenly gap-8 p-4">
+          <img src="/assets/clients/claro.png" class="h-20 object-fill" />
+          <img src="/assets/clients/coca.png" class="h-20 object-fill" />
+          <img src="/assets/clients/aegea.png" class="h-20 object-fill" />
         </div>
       </section>
+      <section class="flex flex-col gap-4 text-yun-gray" id="contato">
+        <h2 class="text-2xl font-bold text-yun-gray">Entre em contato</h2>
+        <p>
+          Quer contratar nossos serviços? Entre em contato preenchendo o
+          formulário abaixo.
+        </p>
+        <form>
+          <div class="grid grid-cols-2 gap-12 gap-y-5">
+            <label class="space-y-2">
+              <h4 class="font-bold">Como devemos te chamar?</h4>
+              <input
+                type="text"
+                placeholder="Seu nome ou razão social"
+                class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
+              />
+            </label>
+            <label class="space-y-2">
+              <h4 class="font-bold">Qual seu email para contato?</h4>
+              <input
+                type="email"
+                placeholder="email@contato.com"
+                class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
+              />
+            </label>
+            <label class="space-y-2">
+              <h4 class="font-bold">Qual seu telefone?</h4>
+              <input
+                type="text"
+                placeholder="(86) 9999-9884"
+                class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
+              />
+            </label>
+            <fieldset class="space-x-2 space-y-4">
+              <legend class="font-bold">
+                Deseja receber comunicações por WhatsApp?
+              </legend>
+              <input
+                id="whatsapp-yes"
+                type="radio"
+                name="whatsapp"
+                value="true"
+                class="transition-color appearance-none rounded-full border border-black p-2 accent-yun-yellow shadow-btn shadow-black checked:bg-yun-gray checked:shadow-[2px_2px_0_1px_#000,inset_0.005rem_-0.005rem_0_.2rem_#fff]"
+              />
+              <label for="whatsapp-yes">Sim, por favor.</label>
+              <input
+                id="whatsapp-no"
+                type="radio"
+                value="true"
+                name="whatsapp"
+                class="transition-color appearance-none rounded-full border border-black p-2 accent-yun-yellow shadow-btn shadow-black checked:bg-yun-gray checked:shadow-[2px_2px_0_1px_#000,inset_0.005rem_-0.005rem_0_.2rem_#fff]"
+              />
+              <label for="whatsapp-no">Não, obrigado.</label>
+            </fieldset>
+            <label class="space-y-2">
+              <h4 class="font-bold">Sobre o que deseja falar?</h4>
+              <input
+                type="text"
+                placeholder="Seu nome ou razão social"
+                class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
+              />
+            </label>
+            <label class="space-y-2">
+              <h4 class="font-bold">
+                Descreva a sua demanda e como podemos te ajudar
+              </h4>
+              <textarea
+                placeholder="Uma descrição breve e objetiva de como podemos oferecer nossos serviços a você."
+                rows="6"
+                class="transition-color w-full resize-none border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
+              ></textarea>
+            </label>
+          </div>
+          <div class="mt-4 flex w-full items-center justify-between gap-2">
+            <div>
+              <input
+                id="privacy"
+                type="checkbox"
+                value="true"
+                name="whatsapp"
+                class="transition-color size-4 border border-black bg-white accent-yun-gray"
+              />
+              <label for="privacy">
+                Aceita receber comunicações de acordo com nossa
+                <a
+                  href="#"
+                  class="text-yun-yellow underline hover:text-[#c9a302]"
+                  >Termos de Serviço</a
+                >
+                e
+                <a
+                  href="#"
+                  class="text-yun-yellow underline hover:text-[#c9a302]"
+                  >Política de Privacidade
+                </a>
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="w-fit rounded-lg border border-yun-gray bg-yun-yellow px-3 py-3 font-bold text-yun-gray shadow-btn shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
+            >
+              Entrar em contato
+            </button>
+          </div>
+        </form>
+      </section>
     </main>
+    <footer class="flex flex-col gap-6 bg-yun-gray p-20 text-white">
+      <div class="flex justify-between">
+        <div class="flex flex-col gap-4">
+          <h2 class="text-2xl font-bold">Yuan Soluções</h2>
+          <p>
+            <b>Teresina, PI</b>, Rua Prof. Darcy Araujo, 3025, São Cristóvão |
+            64051-040
+          </p>
+          <p><b>Contato</b>: yuan@yuancob.com | (86) 9 9999-9999</p>
+        </div>
+        <div class="flex gap-8">
+          <div class="space-y-2.5">
+            <h5 class="font-bold">A Empresa</h5>
+            <ul class="space-y-2.5">
+              <li><a href="#">Serviços</a></li>
+              <li><a href="#">Trabalhe conosco</a></li>
+            </ul>
+          </div>
+          <div class="space-y-2.5">
+            <h5 class="font-bold">Recursos</h5>
+            <ul class="space-y-2.5">
+              <li><a href="#">Projetos</a></li>
+              <li><a href="#">Produtos</a></li>
+            </ul>
+          </div>
+          <div class="space-y-2.5">
+            <h5 class="font-bold">Informações legais</h5>
+            <ul class="space-y-2.5">
+              <li><a href="#">Termos de serviço</a></li>
+              <li><a href="#">Política de privacidade</a></li>
+              <li><a href="#">Política de Cookies</a></li>
+              <li><a href="#">Armazenamento de dados</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <span class="h-0.5 w-full bg-white"></span>
+      <div class="flex justify-between">
+        <p class="text-sm">
+          <b>© 2024</b> Yuan Cobranças LTDA. Todos os direitos reservados.
+        </p>
+        <div class="flex gap-4 text-sm">
+          <a href="https://instagram.com/yuansolucoes"
+            ><i data-lucide="instagram"></i
+          ></a>
+          <a href="https://facebook.com/yuansolucoes"
+            ><i data-lucide="facebook"></i
+          ></a>
+          <a href="https://wa.me/5586988264493"
+            ><i data-lucide="whatsapp"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
     <script src="components/Card.js" defer type="module"></script>
     <script src="main.js" type="module"></script>
   </body>
