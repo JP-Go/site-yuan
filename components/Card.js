@@ -1,7 +1,8 @@
+import { twMerge } from "../node_modules/tailwind-merge/dist/bundle-mjs.mjs";
 const template = document.createElement("template");
 template.innerHTML = `
   <link rel="stylesheet" href="/main.css" />
-  <div class="flex flex-col shadow-card shadow-black/25 bg-yun-white rounded-lg p-6 justify-between h-full">
+  <div id="wrapper" class="card">
     <slot></slot>
   </div>
 `;
@@ -11,6 +12,11 @@ class Card extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+    const wrapper = this.shadowRoot.getElementById("wrapper");
+    wrapper.setAttribute(
+      "class",
+      twMerge(wrapper.getAttribute("class"), this.getAttribute("class")),
+    );
   }
 }
 

@@ -7,3 +7,6 @@
     font-family: "PT Sans", sans-serif;
   }
 }
+.card {
+  @apply flex h-full flex-col justify-between rounded-lg bg-yun-white p-6 shadow-card shadow-black/25;
+}

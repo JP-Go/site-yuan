@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body class="min-w-svh min-h-svh bg-white text-black">
@@ -130,6 +129,137 @@
           </card-c>
         </div>
       </section>
+      <section id="metodologia">
+        <h2 class="text-2xl font-bold text-yun-gray">Nossa metodologia</h2>
+        <div class="flex w-full flex-col gap-0">
+          <div class="flex justify-evenly">
+            <card-c class="z-10">
+              <div class="relative h-full max-w-60 text-yun-gray">
+                <div class="flex gap-4">
+                  <p class="w-full"><b>MAPEAR</b> os processos e os fluxos.</p>
+                  <i data-lucide="map" class="w-8"></i>
+                </div>
+                <div
+                  class="absolute left-1/2 top-56 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
+                >
+                  2
+                </div>
+                <div
+                  class="absolute left-1/2 -z-10 h-44 w-0.5 -translate-x-1/2 bg-black"
+                ></div>
+              </div>
+            </card-c>
+            <card-c>
+              <div class="relative h-full max-w-60 text-yun-gray">
+                <div class="flex gap-4">
+                  <p class="w-full">
+                    <b>PLANEJAR</b>
+                    estratégias de melhoria de cobrança e relacionamento.
+                  </p>
+                  <i data-lucide="notebook" class="w-8"></i>
+                </div>
+                <div
+                  class="absolute left-1/2 top-56 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
+                >
+                  4
+                </div>
+                <div
+                  class="absolute left-1/2 -z-10 h-44 w-0.5 -translate-x-1/2 bg-black"
+                ></div>
+              </div>
+            </card-c>
+          </div>
+          <div class="w-full text-black">
+            <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker
+                  id="arrow-tip"
+                  viewBox="0 0 16 16"
+                  refX="4"
+                  refY="4"
+                  markerWidth="16"
+                  markerHeight="16"
+                  orient="auto-start-reverse"
+                >
+                  <path
+                    d="M 0 0 L 4 4 L 0 8"
+                    fill="none"
+                    stroke="currentColor"
+                  />
+                </marker>
+              </defs>
+              <line
+                x1="5"
+                y1="50"
+                x2="100%"
+                y2="50"
+                stroke="currentColor"
+                stroke-width="2"
+                marker-end="url(#arrow-tip)"
+              />
+            </svg>
+          </div>
+          <div class="flex w-full justify-between">
+            <card-c>
+              <div class="relative h-fit max-w-60 text-yun-gray">
+                <div class="flex gap-4">
+                  <p class="w-full">
+                    <b>ENTENDER</b>
+                    a experiência do Cliente e os fatores que impactam no
+                    negócio.
+                  </p>
+                  <i data-lucide="library-big" class="w-8"></i>
+                </div>
+                <div
+                  class="absolute bottom-56 left-1/2 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
+                >
+                  1
+                </div>
+                <div
+                  class="absolute -top-40 left-1/2 -z-10 h-44 w-0.5 -translate-x-1/2 bg-black"
+                ></div>
+              </div>
+            </card-c>
+            <card-c>
+              <div class="relative h-full max-w-60 text-yun-gray">
+                <div class="flex gap-4">
+                  <p class="w-full">
+                    <b>MEDIR E APRIMORAR</b> os indicadores de performance e
+                    qualidade.
+                  </p>
+                  <i data-lucide="ruler" class="w-8"></i>
+                </div>
+                <div
+                  class="absolute bottom-56 left-1/2 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
+                >
+                  3
+                </div>
+                <div
+                  class="absolute -top-48 left-1/2 -z-10 h-44 w-0.5 -translate-x-1/2 bg-black"
+                ></div>
+              </div>
+            </card-c>
+            <card-c>
+              <div class="relative h-min w-min max-w-60 text-yun-gray">
+                <div class="flex gap-4">
+                  <p class="w-full"><b>IMPLEMENTAR E EXPANDIR</b></p>
+                  <p>
+                    <i data-lucide="hammer" class="w-8"></i>
+                  </p>
+                </div>
+                <div
+                  class="absolute bottom-56 left-1/2 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
+                >
+                  5
+                </div>
+                <div
+                  class="absolute -top-48 left-1/2 -z-10 h-44 w-0.5 -translate-x-1/2 bg-black"
+                ></div>
+              </div>
+            </card-c>
+          </div>
+        </div>
+      </section>
       <section id="quem-somos" class="flex flex-col gap-6">
         <h2 class="text-2xl font-bold text-yun-gray">Quem somos</h2>
         <p>
@@ -225,6 +355,7 @@
             <label class="space-y-2">
               <h4 class="font-bold">Como devemos te chamar?</h4>
               <input
+                name="name"
                 type="text"
                 placeholder="Seu nome ou razão social"
                 class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
@@ -233,6 +364,7 @@
             <label class="space-y-2">
               <h4 class="font-bold">Qual seu email para contato?</h4>
               <input
+                name="email"
                 type="email"
                 placeholder="email@contato.com"
                 class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
@@ -241,6 +373,7 @@
             <label class="space-y-2">
               <h4 class="font-bold">Qual seu telefone?</h4>
               <input
+                name="telephone"
                 type="text"
                 placeholder="(86) 9999-9884"
                 class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
@@ -270,8 +403,9 @@
             <label class="space-y-2">
               <h4 class="font-bold">Sobre o que deseja falar?</h4>
               <input
+                name="subject"
                 type="text"
-                placeholder="Seu nome ou razão social"
+                placeholder="Que serviço deseja?"
                 class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
               />
             </label>
@@ -280,6 +414,7 @@
                 Descreva a sua demanda e como podemos te ajudar
               </h4>
               <textarea
+                name="description"
                 placeholder="Uma descrição breve e objetiva de como podemos oferecer nossos serviços a você."
                 rows="6"
                 class="transition-color w-full resize-none border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
@@ -291,8 +426,7 @@
               <input
                 id="privacy"
                 type="checkbox"
-                value="true"
-                name="whatsapp"
+                name="privacy"
                 class="transition-color size-4 border border-black bg-white accent-yun-gray"
               />
               <label for="privacy">
