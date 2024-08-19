@@ -1,7 +1,8 @@
-import { twMerge } from "../node_modules/tailwind-merge/dist/bundle-mjs.mjs";
+import styles from "../style.css?url";
+import { twMerge } from "tailwind-merge";
 const template = document.createElement("template");
 template.innerHTML = `
-  <link rel="stylesheet" href="/main.css" />
+  <link rel="stylesheet" href="${styles}" />
   <div id="wrapper" class="card">
     <slot></slot>
   </div>
