@@ -39,7 +39,7 @@
               <a
                 id="cta-h"
                 href="#contato"
-                class="border-yun-gold h-10 rounded-lg border bg-yun-yellow px-4 py-2 text-yun-gray shadow-yun-yellow transition-all group-active:shadow-none group-active:brightness-90"
+                class="h-10 rounded-lg border border-yun-gold bg-yun-yellow px-4 py-2 text-yun-gray shadow-yun-yellow transition-all group-active:shadow-none group-active:brightness-90"
                 >Entre em contato</a
               >
             </li>
@@ -50,7 +50,7 @@
     <button
       type="button"
       id="fab-to-top"
-      class="border-yun-gold fixed bottom-4 right-4 flex items-center rounded-full border bg-yun-yellow p-2 opacity-0 transition-all"
+      class="fixed bottom-4 right-4 flex items-center rounded-full border border-yun-gold bg-yun-yellow p-2 opacity-0 transition-all"
     >
       <i data-lucide="arrow-up" class="w-4 text-yun-gray"></i>
       Ir para o topo
@@ -72,13 +72,14 @@
             equipe especializada cuidar disso para você.
           </p>
           <img
-            class="absolute -top-10 right-0"
-            src="/assets/business-woman.png"
+            class="absolute -top-8 right-0"
+            src="/assets/mulher-call-center.png"
+            width="720"
             class="object-fill"
           />
           <a
             href="#contato"
-            class="border-yun-gold w-96 rounded-lg border bg-yun-yellow p-4 text-center text-lg font-bold text-yun-gray shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
+            class="w-96 rounded-lg border border-yun-gold bg-yun-yellow p-4 text-center text-lg font-bold text-yun-gray shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
             >ENTRE EM CONTATO</a
           >
           <span
@@ -88,28 +89,25 @@
       </section>
       <section class="flex flex-col gap-8 py-16">
         <h2 class="text-2xl font-bold text-yun-gray">Nossos diferenciais</h2>
-        <div
-          id="diferenciais"
-          class="flex h-80 w-full justify-center gap-8 py-4"
-        >
+        <div id="diferenciais" class="flex h-80 w-full gap-16 py-4">
           <ul
             id="diferenciais-list"
             class="w-min space-y-4 text-center font-bold text-white"
           >
             <li
-              class="hover:border-yun-gold data-[active=true]:border-yun-gold cursor-pointer rounded-lg border border-yun-gray bg-yun-gray p-4 text-lg transition-colors ease-in-out hover:bg-yun-yellow hover:text-yun-gray data-[active=true]:bg-yun-yellow data-[active=true]:text-yun-gray"
+              class="cursor-pointer rounded-lg border border-yun-gray bg-yun-gray p-4 text-lg transition-colors ease-in-out hover:border-yun-gold hover:bg-yun-yellow hover:text-yun-gray data-[active=true]:border-yun-gold data-[active=true]:bg-yun-yellow data-[active=true]:text-yun-gray"
               data-active="true"
             >
               Cobrança humanizada
             </li>
             <li
-              class="hover:border-yun-gold data-[active=true]:border-yun-gold cursor-pointer rounded-lg border border-yun-gray bg-yun-gray p-4 text-lg transition-colors ease-in-out hover:bg-yun-yellow hover:text-yun-gray data-[active=true]:bg-yun-yellow data-[active=true]:text-yun-gray"
+              class="cursor-pointer rounded-lg border border-yun-gray bg-yun-gray p-4 text-lg transition-colors ease-in-out hover:border-yun-gold hover:bg-yun-yellow hover:text-yun-gray data-[active=true]:border-yun-gold data-[active=true]:bg-yun-yellow data-[active=true]:text-yun-gray"
               data-active="false"
             >
               Conhecimento com dados
             </li>
             <li
-              class="hover:border-yun-gold data-[active=true]:border-yun-gold cursor-pointer rounded-lg border border-yun-gray bg-yun-gray p-4 text-lg transition-colors ease-in-out hover:bg-yun-yellow hover:text-yun-gray data-[active=true]:bg-yun-yellow data-[active=true]:text-yun-gray"
+              class="cursor-pointer rounded-lg border border-yun-gray bg-yun-gray p-4 text-lg transition-colors ease-in-out hover:border-yun-gold hover:bg-yun-yellow hover:text-yun-gray data-[active=true]:border-yun-gold data-[active=true]:bg-yun-yellow data-[active=true]:text-yun-gray"
               data-active="false"
             >
               Múltiplos canais de atendimento
@@ -117,41 +115,70 @@
           </ul>
           <div
             id="diferenciais-content"
-            class="flex h-full w-1/2 flex-col justify-center gap-4"
+            class="relative flex h-full w-full flex-col justify-center gap-4"
           >
-            <card-c
+            <div
               data-active="true"
-              class="hidden h-full max-w-md transition-all data-[active=true]:block"
+              class="invisible absolute left-0 top-0 grid h-full w-full grid-cols-2 items-center gap-8 opacity-0 transition-all duration-1000 data-[active=true]:visible data-[active=true]:opacity-100"
             >
-              <p class="leading-tight">
-                Na nossa empresa, acreditamos que a recuperação de dívidas pode
-                ser eficiente com respeito e empatia, adotando a cobrança
-                humanizada para transformar um processo negativo em uma
-                experiência positiva e construtiva.
-              </p>
-            </card-c>
-            <card-c
+              <div class="max-w-md">
+                <h5 class="mb-4 text-4xl font-bold">Cobrança humanizada</h5>
+                <p class="text-lg leading-loose">
+                  Na nossa empresa, acreditamos que a recuperação de dívidas
+                  pode ser eficiente com respeito e empatia, adotando a cobrança
+                  humanizada para transformar um processo negativo em uma
+                  experiência positiva e construtiva.
+                </p>
+              </div>
+
+              <div
+                class="size-80 overflow-hidden rounded-full shadow-lg shadow-yun-gray/50"
+              >
+                <img src="/assets/handshake-removebg.png" class="w-full" />
+              </div>
+            </div>
+            <div
               data-active="false"
-              class="hidden h-full max-w-md transition-all data-[active=true]:block"
+              class="invisible absolute left-0 top-0 grid h-full w-full grid-cols-2 items-center gap-8 opacity-0 transition-all duration-1000 data-[active=true]:visible data-[active=true]:opacity-100"
             >
-              <p class="leading-tight">
-                Destacamo-nos pela excelência na gestão de dados e produção de
-                relatórios precisos. Nossa equipe transforma dados brutos em
-                insights valiosos para decisões estratégicas, usando ferramentas
-                avançadas para acompanhar cobranças e ajustar estratégias em
-                tempo real.
-              </p>
-            </card-c>
-            <card-c
+              <div class="max-w-md">
+                <h5 class="mb-4 text-4xl font-bold">Conhecimento com dados</h5>
+                <p class="text-lg leading-loose">
+                  Destacamo-nos pela excelência na gestão de dados e produção de
+                  relatórios precisos. Nossa equipe transforma dados brutos em
+                  insights valiosos para decisões estratégicas, usando
+                  ferramentas avançadas para acompanhar cobranças e ajustar
+                  estratégias em tempo real.
+                </p>
+              </div>
+
+              <div
+                class="flex size-80 items-center justify-center overflow-hidden rounded-full shadow-lg shadow-yun-gray/50"
+              >
+                <img src="/assets/data-analysis.jpg" class="h-80" />
+              </div>
+            </div>
+            <div
               data-active="false"
-              class="hidden h-full max-w-md transition-all data-[active=true]:block"
+              class="invisible absolute left-0 top-0 grid h-full w-full grid-cols-2 items-start gap-8 opacity-0 transition-all duration-1000 data-[active=true]:visible data-[active=true]:opacity-100"
             >
-              <p class="leading-tight">
-                Entendemos que cada cliente é único, por isso oferecemos
-                múltiplos canais de atendimento. Disponibilizamos ligação ativa;
-                WhatsApp; SMS e e-mail.
-              </p>
-            </card-c>
+              <div class="max-w-md">
+                <h5 class="mb-4 text-4xl font-bold">
+                  Múltiplos canais de atendimento
+                </h5>
+                <p class="text-lg leading-loose">
+                  Entendemos que cada cliente é único, por isso oferecemos
+                  múltiplos canais de atendimento. Disponibilizamos ligação
+                  ativa; WhatsApp; SMS e e-mail.
+                </p>
+              </div>
+
+              <div
+                class="flex size-80 items-center justify-center overflow-hidden rounded-full shadow-lg shadow-yun-gray/50"
+              >
+                <img src="/assets/whatsapp.jpg" class="aspect-video h-80" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -166,12 +193,12 @@
                   <i data-lucide="map" class="w-8"></i>
                 </div>
                 <div
-                  class="absolute left-1/2 top-44 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
+                  class="absolute left-1/2 top-36 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
                 >
                   2
                 </div>
                 <div
-                  class="absolute left-1/2 -z-10 h-32 w-0.5 -translate-x-1/2 bg-black"
+                  class="absolute left-1/2 -z-10 h-24 w-0.5 -translate-x-1/2 bg-black"
                 ></div>
               </div>
             </card-c>
@@ -185,7 +212,7 @@
                   <i data-lucide="notebook" class="w-8"></i>
                 </div>
                 <div
-                  class="absolute left-1/2 top-44 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
+                  class="absolute left-1/2 top-36 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
                 >
                   4
                 </div>
@@ -237,7 +264,7 @@
                   <i data-lucide="library-big" class="w-8"></i>
                 </div>
                 <div
-                  class="absolute -top-[calc(100%+50px)] left-1/2 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
+                  class="absolute -top-[calc(100%+40px)] left-1/2 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
                 >
                   1
                 </div>
@@ -256,7 +283,7 @@
                   <i data-lucide="ruler" class="w-8"></i>
                 </div>
                 <div
-                  class="absolute -top-[calc(100%+50px)] left-1/2 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
+                  class="absolute -top-[calc(100%+40px)] left-1/2 z-0 flex size-10 -translate-x-1/2 items-center justify-center rounded-full bg-yun-gray text-xl font-bold text-yun-yellow"
                 >
                   3
                 </div>
@@ -373,111 +400,14 @@
       <section class="flex flex-col gap-4 text-yun-gray" id="contato">
         <h2 class="text-2xl font-bold text-yun-gray">Entre em contato</h2>
         <p>
-          Quer contratar nossos serviços? Entre em contato preenchendo o
-          formulário abaixo.
+          Quer contratar nossos serviços? Entre em contato conosco utilizando um
+          de nossos canais de atendimento.
         </p>
-        <form>
-          <div class="grid grid-cols-2 gap-12 gap-y-5">
-            <label class="space-y-2">
-              <h4 class="font-bold">Como devemos te chamar?</h4>
-              <input
-                name="name"
-                type="text"
-                placeholder="Seu nome ou razão social"
-                class="transition-color w-full border border-black p-2 shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
-              />
-            </label>
-            <label class="space-y-2">
-              <h4 class="font-bold">Qual seu email para contato?</h4>
-              <input
-                name="email"
-                type="email"
-                placeholder="email@contato.com"
-                class="transition-color w-full border border-black p-2 shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
-              />
-            </label>
-            <label class="space-y-2">
-              <h4 class="font-bold">Qual seu telefone?</h4>
-              <input
-                name="telephone"
-                type="text"
-                placeholder="(86) 9999-9884"
-                class="transition-color w-full border border-black p-2 shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
-              />
-            </label>
-            <fieldset class="space-x-2 space-y-4">
-              <legend class="font-bold">
-                Deseja receber comunicações por WhatsApp?
-              </legend>
-              <input
-                id="whatsapp-yes"
-                type="radio"
-                name="whatsapp"
-                value="true"
-                class="transition-color appearance-none rounded-full border border-black p-2 accent-yun-yellow shadow-black checked:bg-yun-gray checked:shadow-[2px_2px_0_1px_#000,inset_0.005rem_-0.005rem_0_.2rem_#fff]"
-              />
-              <label for="whatsapp-yes">Sim, por favor.</label>
-              <input
-                id="whatsapp-no"
-                type="radio"
-                value="true"
-                name="whatsapp"
-                class="transition-color appearance-none rounded-full border border-black p-2 accent-yun-yellow shadow-black checked:bg-yun-gray checked:shadow-[2px_2px_0_1px_#000,inset_0.005rem_-0.005rem_0_.2rem_#fff]"
-              />
-              <label for="whatsapp-no">Não, obrigado.</label>
-            </fieldset>
-            <label class="space-y-2">
-              <h4 class="font-bold">Sobre o que deseja falar?</h4>
-              <input
-                name="subject"
-                type="text"
-                placeholder="Que serviço deseja?"
-                class="transition-color w-full border border-black p-2 shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
-              />
-            </label>
-            <label class="space-y-2">
-              <h4 class="font-bold">
-                Descreva a sua demanda e como podemos te ajudar
-              </h4>
-              <textarea
-                name="description"
-                placeholder="Uma descrição breve e objetiva de como podemos oferecer nossos serviços a você."
-                rows="6"
-                class="transition-color w-full resize-none border border-black p-2 shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
-              ></textarea>
-            </label>
-          </div>
-          <div class="mt-4 flex w-full items-center justify-between gap-2">
-            <div>
-              <input
-                id="privacy"
-                type="checkbox"
-                name="privacy"
-                class="transition-color size-4 border border-black bg-white accent-yun-gray"
-              />
-              <label for="privacy">
-                Aceita receber comunicações de acordo com nossa
-                <a
-                  href="#"
-                  class="text-yun-yellow underline hover:text-[#c9a302]"
-                  >Termos de Serviço</a
-                >
-                e
-                <a
-                  href="#"
-                  class="text-yun-yellow underline hover:text-[#c9a302]"
-                  >Política de Privacidade
-                </a>
-              </label>
-            </div>
-            <button
-              type="submit"
-              class="border-yun-gold w-fit rounded-lg border bg-yun-yellow px-3 py-3 font-bold text-yun-gray shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
-            >
-              Entrar em contato
-            </button>
-          </div>
-        </form>
+        <div class="flex w-full gap-16">
+          <card-c class="w-full"></card-c>
+          <card-c class="w-full"></card-c>
+          <card-c class="w-full"></card-c>
+        </div>
       </section>
     </main>
     <footer
