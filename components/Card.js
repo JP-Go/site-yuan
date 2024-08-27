@@ -14,6 +14,7 @@ class Card extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     const wrapper = this.shadowRoot.getElementById("wrapper");
+    wrapper.dataset.active = this.dataset.active || false;
     wrapper.setAttribute(
       "class",
       twMerge(wrapper.getAttribute("class"), this.getAttribute("class")),

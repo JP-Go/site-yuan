@@ -6,6 +6,7 @@ module.exports = {
         "yun-gray": "#36383A",
         "yun-white": "#ffffff",
         "yun-yellow": "#FCCE0B",
+        "yun-gold": "#D6B20D",
       },
       boxShadow: {
         btn: "2px 2px 0px 1px",

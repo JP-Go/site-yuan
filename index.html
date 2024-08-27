@@ -14,10 +14,10 @@
   </head>
   <body class="min-w-svh min-h-svh bg-white text-black">
     <header
-      class="fixed top-4 z-20 flex h-fit w-full items-center justify-center"
+      class="fixed top-4 z-20 flex h-fit w-full items-center justify-center px-16"
     >
       <div
-        class="mx-auto flex h-20 w-[1200px] items-center rounded-lg bg-yun-white px-6 py-2 text-yun-gray shadow-card shadow-yun-gray/50"
+        class="mx-auto flex h-20 w-full items-center rounded-lg bg-yun-white px-6 py-2 text-yun-gray shadow-card shadow-yun-gray/50"
       >
         <img src="/assets/logo.jpeg" class="h-10 object-fill" />
         <div class="ml-auto h-fit">
@@ -39,7 +39,7 @@
               <a
                 id="cta-h"
                 href="#contato"
-                class="h-10 rounded-lg border border-yun-gray bg-yun-yellow px-4 py-2 text-yun-gray shadow-btn shadow-yun-yellow transition-all group-active:shadow-none group-active:brightness-90"
+                class="border-yun-gold h-10 rounded-lg border bg-yun-yellow px-4 py-2 text-yun-gray shadow-yun-yellow transition-all group-active:shadow-none group-active:brightness-90"
                 >Entre em contato</a
               >
             </li>
@@ -50,7 +50,7 @@
     <button
       type="button"
       id="fab-to-top"
-      class="fixed bottom-4 right-4 flex items-center rounded-full bg-yun-yellow p-2 opacity-0 transition-all"
+      class="border-yun-gold fixed bottom-4 right-4 flex items-center rounded-full border bg-yun-yellow p-2 opacity-0 transition-all"
     >
       <i data-lucide="arrow-up" class="w-4 text-yun-gray"></i>
       Ir para o topo
@@ -61,7 +61,7 @@
           class="relative flex min-h-[420px] w-full flex-col justify-center gap-4 overflow-visible rounded-xl bg-yun-gray p-16 text-white"
         >
           <span
-            class="absolute right-0 top-0 -z-10 h-[50px] w-[300px] -translate-y-1/2 translate-x-1/4 rounded-xl bg-yun-yellow"
+            class="absolute right-0 top-0 -z-10 h-[50px] w-[300px] -translate-y-1/2 translate-x-16 rounded-xl bg-yun-yellow"
           ></span>
           <h1 class="text-2xl font-bold">Yuan Soluções</h1>
           <h2 class="w-[400px] text-4xl font-bold text-yun-yellow">
@@ -78,39 +78,62 @@
           />
           <a
             href="#contato"
-            class="w-fit rounded-lg border border-yun-gray bg-yun-yellow px-3 py-3 font-bold text-yun-gray shadow-btn shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
-            >Entre em contato</a
+            class="border-yun-gold w-96 rounded-lg border bg-yun-yellow p-4 text-center text-lg font-bold text-yun-gray shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
+            >ENTRE EM CONTATO</a
           >
           <span
-            class="absolute bottom-0 left-0 -z-10 h-[50px] w-[300px] -translate-x-1/4 translate-y-1/2 rounded-xl bg-yun-yellow"
+            class="absolute bottom-0 left-0 -z-10 h-[50px] w-[300px] -translate-x-16 translate-y-1/2 rounded-xl bg-yun-yellow"
           ></span>
         </div>
       </section>
-      <section class="flex flex-col gap-6">
+      <section class="flex flex-col gap-8 py-16">
         <h2 class="text-2xl font-bold text-yun-gray">Nossos diferenciais</h2>
         <div
           id="diferenciais"
-          class="flex h-80 w-full justify-center gap-8 p-4"
+          class="flex h-80 w-full justify-center gap-8 py-4"
         >
-          <card-c class="w-full">
-            <div class="flex flex-col gap-4">
-              <h4 class="font-bold text-yun-gray">Cobrança humanizada</h4>
+          <ul
+            id="diferenciais-list"
+            class="w-min space-y-4 text-center font-bold text-white"
+          >
+            <li
+              class="hover:border-yun-gold data-[active=true]:border-yun-gold cursor-pointer rounded-lg border border-yun-gray bg-yun-gray p-4 text-lg transition-colors ease-in-out hover:bg-yun-yellow hover:text-yun-gray data-[active=true]:bg-yun-yellow data-[active=true]:text-yun-gray"
+              data-active="true"
+            >
+              Cobrança humanizada
+            </li>
+            <li
+              class="hover:border-yun-gold data-[active=true]:border-yun-gold cursor-pointer rounded-lg border border-yun-gray bg-yun-gray p-4 text-lg transition-colors ease-in-out hover:bg-yun-yellow hover:text-yun-gray data-[active=true]:bg-yun-yellow data-[active=true]:text-yun-gray"
+              data-active="false"
+            >
+              Conhecimento com dados
+            </li>
+            <li
+              class="hover:border-yun-gold data-[active=true]:border-yun-gold cursor-pointer rounded-lg border border-yun-gray bg-yun-gray p-4 text-lg transition-colors ease-in-out hover:bg-yun-yellow hover:text-yun-gray data-[active=true]:bg-yun-yellow data-[active=true]:text-yun-gray"
+              data-active="false"
+            >
+              Múltiplos canais de atendimento
+            </li>
+          </ul>
+          <div
+            id="diferenciais-content"
+            class="flex h-full w-1/2 flex-col justify-center gap-4"
+          >
+            <card-c
+              data-active="true"
+              class="hidden h-full max-w-md transition-all data-[active=true]:block"
+            >
               <p class="leading-tight">
                 Na nossa empresa, acreditamos que a recuperação de dívidas pode
                 ser eficiente com respeito e empatia, adotando a cobrança
                 humanizada para transformar um processo negativo em uma
                 experiência positiva e construtiva.
               </p>
-            </div>
-            <a
-              href="#contato"
-              class="w-fit rounded-lg border border-yun-gray bg-yun-yellow px-3 py-3 font-bold text-yun-gray shadow-btn shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
-              >Saiba mais</a
+            </card-c>
+            <card-c
+              data-active="false"
+              class="hidden h-full max-w-md transition-all data-[active=true]:block"
             >
-          </card-c>
-          <card-c class="w-full">
-            <div class="flex flex-col gap-4">
-              <h4 class="font-bold text-yun-gray">Conhecimento com dados</h4>
               <p class="leading-tight">
                 Destacamo-nos pela excelência na gestão de dados e produção de
                 relatórios precisos. Nossa equipe transforma dados brutos em
@@ -118,30 +141,18 @@
                 avançadas para acompanhar cobranças e ajustar estratégias em
                 tempo real.
               </p>
-            </div>
-            <a
-              href="#contato"
-              class="w-fit rounded-lg border border-yun-gray bg-yun-yellow px-3 py-3 font-bold text-yun-gray shadow-btn shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
-              >Saiba mais</a
+            </card-c>
+            <card-c
+              data-active="false"
+              class="hidden h-full max-w-md transition-all data-[active=true]:block"
             >
-          </card-c>
-          <card-c class="w-full">
-            <div class="flex flex-col gap-4">
-              <h4 class="font-bold text-yun-gray">
-                Múltiplos canais de atendimento
-              </h4>
               <p class="leading-tight">
                 Entendemos que cada cliente é único, por isso oferecemos
                 múltiplos canais de atendimento. Disponibilizamos ligação ativa;
                 WhatsApp; SMS e e-mail.
               </p>
-            </div>
-            <a
-              href="#contato"
-              class="w-fit rounded-lg border border-yun-gray bg-yun-yellow px-3 py-3 font-bold text-yun-gray shadow-btn shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
-              >Saiba mais</a
-            >
-          </card-c>
+            </card-c>
+          </div>
         </div>
       </section>
       <section id="metodologia">
@@ -284,7 +295,7 @@
           as inovações do mercado e focando nossas ações para a obtenção dos
           melhores resultados.
         </p>
-        <div class="flex gap-4 p-4">
+        <div class="flex gap-4 py-4">
           <card-c class="w-full">
             <div class="flex w-full flex-col items-center gap-6 text-center">
               <div
@@ -373,7 +384,7 @@
                 name="name"
                 type="text"
                 placeholder="Seu nome ou razão social"
-                class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
+                class="transition-color w-full border border-black p-2 shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
               />
             </label>
             <label class="space-y-2">
@@ -382,7 +393,7 @@
                 name="email"
                 type="email"
                 placeholder="email@contato.com"
-                class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
+                class="transition-color w-full border border-black p-2 shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
               />
             </label>
             <label class="space-y-2">
@@ -391,7 +402,7 @@
                 name="telephone"
                 type="text"
                 placeholder="(86) 9999-9884"
-                class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
+                class="transition-color w-full border border-black p-2 shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
               />
             </label>
             <fieldset class="space-x-2 space-y-4">
@@ -403,7 +414,7 @@
                 type="radio"
                 name="whatsapp"
                 value="true"
-                class="transition-color appearance-none rounded-full border border-black p-2 accent-yun-yellow shadow-btn shadow-black checked:bg-yun-gray checked:shadow-[2px_2px_0_1px_#000,inset_0.005rem_-0.005rem_0_.2rem_#fff]"
+                class="transition-color appearance-none rounded-full border border-black p-2 accent-yun-yellow shadow-black checked:bg-yun-gray checked:shadow-[2px_2px_0_1px_#000,inset_0.005rem_-0.005rem_0_.2rem_#fff]"
               />
               <label for="whatsapp-yes">Sim, por favor.</label>
               <input
@@ -411,7 +422,7 @@
                 type="radio"
                 value="true"
                 name="whatsapp"
-                class="transition-color appearance-none rounded-full border border-black p-2 accent-yun-yellow shadow-btn shadow-black checked:bg-yun-gray checked:shadow-[2px_2px_0_1px_#000,inset_0.005rem_-0.005rem_0_.2rem_#fff]"
+                class="transition-color appearance-none rounded-full border border-black p-2 accent-yun-yellow shadow-black checked:bg-yun-gray checked:shadow-[2px_2px_0_1px_#000,inset_0.005rem_-0.005rem_0_.2rem_#fff]"
               />
               <label for="whatsapp-no">Não, obrigado.</label>
             </fieldset>
@@ -421,7 +432,7 @@
                 name="subject"
                 type="text"
                 placeholder="Que serviço deseja?"
-                class="transition-color w-full border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
+                class="transition-color w-full border border-black p-2 shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
               />
             </label>
             <label class="space-y-2">
@@ -432,7 +443,7 @@
                 name="description"
                 placeholder="Uma descrição breve e objetiva de como podemos oferecer nossos serviços a você."
                 rows="6"
-                class="transition-color w-full resize-none border border-black p-2 shadow-btn shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
+                class="transition-color w-full resize-none border border-black p-2 shadow-black transition-all focus:shadow-yun-yellow focus:outline-none"
               ></textarea>
             </label>
           </div>
@@ -461,7 +472,7 @@
             </div>
             <button
               type="submit"
-              class="w-fit rounded-lg border border-yun-gray bg-yun-yellow px-3 py-3 font-bold text-yun-gray shadow-btn shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
+              class="border-yun-gold w-fit rounded-lg border bg-yun-yellow px-3 py-3 font-bold text-yun-gray shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
             >
               Entrar em contato
             </button>

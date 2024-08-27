@@ -46,3 +46,19 @@ window.addEventListener("scroll", () => {
     }
   }
 });
+
+const diferentialsList = document.querySelector("#diferenciais-list");
+Array.from(diferentialsList.children).forEach((child, index) => {
+  child.addEventListener("click", () => {
+    Array.from(diferentialsList.children).forEach((child) => {
+      child.setAttribute("data-active", "false");
+    });
+    child.setAttribute("data-active", "true");
+
+    const content = document.querySelector("#diferenciais-content");
+    Array.from(content.children).forEach((c) => {
+      c.setAttribute("data-active", "false");
+    });
+    content.children[index].setAttribute("data-active", "true");
+  });
+});
