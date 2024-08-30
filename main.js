@@ -8,8 +8,10 @@ import {
   Ruler,
   Notebook,
   LibraryBig,
+  Mails,
   Map,
   ArrowUp,
+  PhoneCall,
 } from "lucide";
 
 createIcons({
@@ -24,6 +26,8 @@ createIcons({
     Map,
     LibraryBig,
     ArrowUp,
+    PhoneCall,
+    Mails,
   },
 });
 
