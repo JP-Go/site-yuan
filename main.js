@@ -51,6 +51,17 @@ window.addEventListener("scroll", () => {
   }
 });
 
+window.onhashchange = () => {
+  const hash = window.location.hash;
+  const section = document.querySelector(hash);
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  }
+};
+
 const diferentialsList = document.querySelector("#diferenciais-list");
 Array.from(diferentialsList.children).forEach((child, index) => {
   child.addEventListener("click", () => {
