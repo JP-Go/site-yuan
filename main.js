@@ -62,6 +62,8 @@ window.onhashchange = () => {
   }
 };
 
+const diferentialsBackdrop = document.querySelector("#diferenciais-backdrop");
+
 const diferentialsList = document.querySelector("#diferenciais-list");
 Array.from(diferentialsList.children).forEach((child, index) => {
   child.addEventListener("click", () => {
@@ -72,6 +74,23 @@ Array.from(diferentialsList.children).forEach((child, index) => {
 
     const content = document.querySelector("#diferenciais-content");
     Array.from(content.children).forEach((c) => {
+      c.lastElementChild.animate(
+        [
+          {
+            opacity: 0,
+            transform: "translate(50%,-40px)",
+          },
+          {
+            opacity: 100,
+            transform: "translate(0%,-40px)",
+          },
+        ],
+        {
+          easing: "ease",
+          duration: 500,
+          fill: "forwards",
+        },
+      );
       c.setAttribute("data-active", "false");
     });
     content.children[index].setAttribute("data-active", "true");
