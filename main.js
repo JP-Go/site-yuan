@@ -12,6 +12,8 @@ import {
   Map,
   ArrowUp,
   PhoneCall,
+  X,
+  Menu,
 } from "lucide";
 
 createIcons({
@@ -28,6 +30,8 @@ createIcons({
     ArrowUp,
     PhoneCall,
     Mails,
+    X,
+    Menu,
   },
 });
 
