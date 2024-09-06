@@ -22,8 +22,16 @@
       class="fixed top-0 z-20 flex h-fit w-full items-center justify-center lg:top-4 lg:px-16"
     >
       <div
-        class="flex h-20 w-full items-center bg-yun-white px-6 py-2 text-yun-gray shadow-card shadow-yun-gray/50 lg:mx-auto lg:rounded-lg"
+        class="mx-auto flex h-20 w-full items-center gap-4 bg-yun-white px-6 py-2 text-yun-gray shadow-card shadow-yun-gray/50 lg:mx-auto lg:rounded-lg 2xl:max-w-screen-2xl"
       >
+        <button
+          aria-label="Open menu"
+          type="button"
+          id="sidebar-open"
+          class="lg:hidden"
+        >
+          <i data-lucide="menu" class="size-6"></i>
+        </button>
         <img src="/assets/logo.png" class="h-8 object-fill lg:h-10" />
         <div class="hidden h-fit lg:ml-auto lg:block">
           <ul class="flex items-center gap-8 font-bold">
@@ -68,35 +76,44 @@
     </button>
     <aside
       id="sidebar"
-      class="fixed left-0 top-0 z-30 h-full max-h-svh w-full bg-black/80 pb-20 lg:hidden"
+      class="collapse fixed left-0 top-0 z-30 h-dvh w-full bg-black/80 transition-opacity lg:hidden"
     >
-      <div class="h-20 w-2/3 bg-white px-4" id="sidebar-close">
-        <i data-lucide="x" class="ml-auto h-16 text-yun-gray"></i>
-      </div>
-      <ul
-        class="flex h-full w-2/3 flex-col items-start gap-8 bg-white px-4 font-bold"
+      <div
+        class="h-dvh w-2/3 -translate-x-full bg-white pb-32 transition-transform data-[open=true]:translate-x-0"
+        draggable="false"
+        id="sidebar-menu"
+        data-open="false"
       >
-        <li><a href="#diferenciais">Diferenciais</a></li>
-        <li><a href="#quem-somos">Quem somos</a></li>
-        <li><a href="#clientes">Nossos clientes</a></li>
-        <li>
-          <a
-            href="https://recrutamento.allstark.com.br"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Trabalhe conosco</a
-          >
-        </li>
-        <li class="mt-auto w-full">
-          <a
-            href="#contato"
-            class="text-md w-full rounded-lg border border-yun-gold bg-yun-yellow py-2 text-center font-bold text-yun-gray shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
-            >ENTRE EM CONTATO</a
-          >
-        </li>
-      </ul>
+        <div class="h-20 bg-white px-4" id="sidebar-close">
+          <i data-lucide="x" class="ml-auto h-16 text-yun-gray"></i>
+        </div>
+        <ul
+          class="flex h-full flex-col items-start gap-8 bg-white px-4 font-bold"
+        >
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#quem-somos">Quem somos</a></li>
+          <li><a href="#clientes">Nossos clientes</a></li>
+          <li>
+            <a
+              href="https://recrutamento.allstark.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Trabalhe conosco</a
+            >
+          </li>
+          <li class="mt-auto w-full">
+            <a
+              href="#contato"
+              class="text-md inline-block w-full rounded-lg border border-yun-gold bg-yun-yellow py-2 text-center font-bold text-yun-gray shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90"
+              >ENTRE EM CONTATO</a
+            >
+          </li>
+        </ul>
+      </div>
     </aside>
-    <main class="z-10 mt-40 w-full space-y-16 px-6 lg:px-16">
+    <main
+      class="z-10 mx-auto mt-40 w-full space-y-16 px-6 lg:px-16 2xl:max-w-screen-2xl"
+    >
       <section class="flex items-center justify-center py-4 lg:py-16">
         <div
           class="relative flex min-h-[420px] w-full flex-col justify-center gap-4 overflow-visible rounded-xl bg-yun-gray p-4 text-white lg:p-16"
@@ -105,10 +122,12 @@
             class="absolute right-0 top-0 -z-10 h-16 w-2/3 -translate-y-1/2 translate-x-3 rounded-lg bg-yun-yellow lg:w-1/6 lg:translate-x-8"
           ></span>
           <h1 class="text-2xl font-bold">Yuan Soluções</h1>
-          <h2 class="text-4xl font-bold text-yun-yellow md:w-[480px]">
+          <h2
+            class="text-4xl font-bold text-yun-yellow md:w-[400px] lg:w-[480px]"
+          >
             Simplifique os processos da sua empresa!
           </h2>
-          <p class="md:w-[480px]">
+          <p class="md:w-[400px] lg:w-[480px]">
             Está enfrentando dificuldades para receber pagamentos? Deixe nossa
             equipe especializada cuidar disso para você.
           </p>
@@ -116,11 +135,11 @@
             class="absolute -top-8 right-0 hidden md:block"
             src="/assets/mulher-call-center.png"
             width="720"
-            class="object-fill"
+            class="object-fill brightness-125"
           />
           <a
             href="#contato"
-            class="rounded-lg border border-yun-gold bg-yun-yellow p-4 text-center text-lg font-bold text-yun-gray shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90 md:w-[480px]"
+            class="rounded-lg border border-yun-gold bg-yun-yellow p-4 text-center text-lg font-bold text-yun-gray shadow-yun-yellow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none active:brightness-90 md:w-[400px] lg:w-[480px]"
             >ENTRE EM CONTATO</a
           >
           <span
@@ -128,15 +147,14 @@
           ></span>
         </div>
       </section>
-      <section class="flex flex-col gap-8">
+      <section class="flex flex-col gap-8" id="diferenciais">
         <h2 class="text-2xl font-bold text-yun-gray">Nossos diferenciais</h2>
         <div
-          id="diferenciais"
           class="hidden w-full items-center gap-24 md:flex md:flex-col lg:py-4"
         >
           <ul
             id="diferenciais-list"
-            class="mx-auto hidden h-28 w-min text-center font-bold text-white md:flex md:items-center md:justify-center md:gap-16"
+            class="hidden h-28 w-full grow-0 basis-16 text-center font-bold text-white md:flex md:items-center md:justify-between md:gap-16"
           >
             <li
               class="h-full cursor-pointer rounded-lg border border-yun-gray bg-yun-gray p-4 text-center text-lg transition-colors ease-in-out hover:border-yun-gold hover:bg-yun-yellow hover:text-yun-gray data-[active=true]:border-yun-gold data-[active=true]:bg-yun-yellow data-[active=true]:text-yun-gray 2xl:text-xl"
@@ -159,13 +177,13 @@
           </ul>
           <div
             id="diferenciais-content"
-            class="hidden h-full w-full overflow-visible md:flex md:max-w-screen-lg md:justify-center lg:basis-72 2xl:max-w-screen-xl"
+            class="hidden h-full w-full overflow-visible md:flex 2xl:max-w-screen-2xl"
           >
             <div
               data-active="true"
-              class="invisible hidden h-full grid-cols-2 justify-items-center gap-8 overflow-visible opacity-0 transition-all duration-500 data-[active=true]:visible data-[active=true]:grid data-[active=true]:min-w-full data-[active=true]:opacity-100"
+              class="collapse hidden h-[380px] grid-cols-2 justify-items-center gap-8 overflow-visible opacity-0 transition-all duration-500 data-[active=true]:visible data-[active=true]:grid data-[active=true]:min-w-full data-[active=true]:opacity-100"
             >
-              <div class="max-w-md">
+              <div>
                 <h5 class="mb-4 text-4xl font-bold 2xl:text-6xl">
                   Cobrança humanizada
                 </h5>
@@ -198,9 +216,9 @@
             </div>
             <div
               data-active="false"
-              class="invisible hidden h-full grid-cols-2 justify-items-center gap-8 overflow-visible opacity-0 transition-all duration-500 data-[active=true]:visible data-[active=true]:grid data-[active=true]:min-w-full data-[active=true]:opacity-100"
+              class="collapse hidden h-[380px] grid-cols-2 justify-items-center gap-8 overflow-visible opacity-0 transition-all duration-500 data-[active=true]:visible data-[active=true]:grid data-[active=true]:min-w-full data-[active=true]:opacity-100"
             >
-              <div class="max-w-md">
+              <div>
                 <h5 class="mb-4 text-4xl font-bold 2xl:text-6xl">
                   Conhecimento com dados
                 </h5>
@@ -234,9 +252,9 @@
             </div>
             <div
               data-active="false"
-              class="invisible hidden h-full grid-cols-2 justify-items-center gap-8 overflow-visible opacity-0 transition-all duration-500 data-[active=true]:visible data-[active=true]:grid data-[active=true]:min-w-full data-[active=true]:opacity-100"
+              class="collapse hidden h-[380px] grid-cols-2 justify-items-center gap-8 overflow-visible opacity-0 transition-all duration-500 data-[active=true]:visible data-[active=true]:grid data-[active=true]:min-w-full data-[active=true]:opacity-100"
             >
-              <div class="max-w-md">
+              <div>
                 <h5 class="mb-4 text-4xl font-bold 2xl:text-6xl">
                   Múltiplos canais de atendimento
                 </h5>
@@ -670,7 +688,7 @@
           <card-c class="w-full items-center justify-start gap-4">
             <h4 class="text-lg font-bold">WhatsApp</h4>
             <a
-              href="https://wa.me/558699513439?text=Quero+saber+mais+sobre+os+serviços+da+Yuan+Soluções"
+              href="https://wa.me/5586999875055?text=Quero+saber+mais+sobre+os+serviços+da+Yuan+Soluções"
               target="_blank"
               rel="noopener noreferrer"
               class="font-bold text-yun-yellow underline hover:text-yun-gold"
@@ -693,7 +711,7 @@
             <p>
               Fale conosco pelo
               <a
-                href="https://wa.me/558699513439?text=Quero+saber+mais+sobre+os+serviços+da+Yuan+Soluções"
+                href="https://wa.me/5586999875055?text=Quero+saber+mais+sobre+os+serviços+da+Yuan+Soluções"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="font-bold text-yun-yellow underline hover:text-yun-gold"
@@ -731,7 +749,7 @@
           <card-c class="w-full items-center justify-start gap-4">
             <h4 class="text-lg font-bold">Telefone</h4>
             <a
-              href="tel:+5586999513439"
+              href="tel:+5586998549910"
               class="font-bold text-yun-yellow underline hover:text-yun-gold"
             >
               <div class="rounded-full bg-purple-600 p-3">
@@ -742,9 +760,9 @@
               Você também pode ligar para nossa central de atendimento por meio
               do telefone
               <a
-                href="tel:+5586999513439"
+                href="tel:+5586998549910"
                 class="font-bold text-yun-yellow underline hover:text-yun-gold"
-                ><b>(86) 99951-3439</b></a
+                ><b>(86) 99854-9910</b></a
               >
               e nos contar sobre seus planos e como podemos te ajudar a melhorar
               seu relacionamento com os seus clientes.
@@ -754,7 +772,7 @@
       </section>
     </main>
     <footer
-      class="mt-6 flex flex-col gap-6 border border-b-0 border-l-0 border-r-0 border-t-gray-200 bg-white p-6 text-yun-gray lg:p-20"
+      class="mx-auto mt-6 flex flex-col gap-6 border border-b-0 border-l-0 border-r-0 border-t-gray-200 bg-white p-6 text-yun-gray lg:p-20 2xl:max-w-screen-2xl"
     >
       <div class="flex flex-col gap-6 md:flex-row md:justify-between">
         <div class="flex flex-col justify-start gap-4">
@@ -768,7 +786,7 @@
           </p>
           <div class="flex gap-8">
             <p>yuan@yuancob.com</p>
-            <p>(86) 99951-3439</p>
+            <p>(86) 99854-9910</p>
           </div>
         </div>
         <div class="flex gap-8">
@@ -846,7 +864,7 @@
               /></svg
           ></a>
           <a
-            href="https://wa.me/5586999513439"
+            href="https://wa.me/5586999875055"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -16,25 +16,6 @@ import {
   Menu,
 } from "lucide";
 
-createIcons({
-  icons: {
-    Handshake,
-    Star,
-    Gem,
-    BookOpenCheck,
-    Hammer,
-    Ruler,
-    Notebook,
-    Map,
-    LibraryBig,
-    ArrowUp,
-    PhoneCall,
-    Mails,
-    X,
-    Menu,
-  },
-});
-
 import "./components/Card";
 
 document.querySelector("#fab-to-top").addEventListener("click", () => {
@@ -58,15 +39,15 @@ window.addEventListener("scroll", () => {
 window.onhashchange = () => {
   const hash = window.location.hash;
   const section = document.querySelector(hash);
+
   if (section) {
-    section.scrollIntoView({
+    const top = section.getBoundingClientRect().y + window.scrollY;
+    window.scrollTo({
       behavior: "smooth",
-      block: "center",
+      top: top - 100,
     });
   }
 };
-
-const diferentialsBackdrop = document.querySelector("#diferenciais-backdrop");
 
 const diferentialsList = document.querySelector("#diferenciais-list");
 Array.from(diferentialsList.children).forEach((child, index) => {
@@ -82,11 +63,9 @@ Array.from(diferentialsList.children).forEach((child, index) => {
         [
           {
             opacity: 0,
-            transform: "translate(50%,-40px)",
           },
           {
-            opacity: 100,
-            transform: "translate(0%,-40px)",
+            opacity: 1,
           },
         ],
         {
@@ -99,4 +78,63 @@ Array.from(diferentialsList.children).forEach((child, index) => {
     });
     content.children[index].setAttribute("data-active", "true");
   });
+});
+
+const sidebarContainer = document.querySelector("#sidebar");
+const sidebarOpen = document.querySelector("#sidebar-open");
+const sidebarClose = document.querySelector("#sidebar-close");
+const sidebarMenu = document.querySelector("#sidebar-menu");
+
+const animateToggleMenu = ({ open } = { open: true }) => {
+  sidebarContainer.animate(
+    [{ opacity: open ? 0 : 1 }, { opacity: open ? 1 : 0 }],
+    {
+      duration: 200,
+    },
+  );
+
+  sidebarMenu.setAttribute("data-open", open);
+  setTimeout(
+    () => {
+      sidebarContainer.classList.toggle("collapse");
+    },
+    open ? 0 : 150,
+  );
+};
+
+sidebarContainer.addEventListener("click", () => {
+  animateToggleMenu({
+    open: false,
+  });
+  console.log("click container emited");
+});
+
+sidebarClose.addEventListener("click", (e) => {
+  e.stopPropagation();
+  animateToggleMenu({
+    open: false,
+  });
+});
+
+sidebarOpen.addEventListener("click", () => {
+  animateToggleMenu();
+});
+
+createIcons({
+  icons: {
+    Handshake,
+    Star,
+    Gem,
+    BookOpenCheck,
+    Hammer,
+    Ruler,
+    Notebook,
+    Map,
+    LibraryBig,
+    ArrowUp,
+    PhoneCall,
+    Mails,
+    X,
+    Menu,
+  },
 });
